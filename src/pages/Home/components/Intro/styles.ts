@@ -10,6 +10,7 @@ export const IntroContainer = styled.section`
   display: flex;
   gap: 2rem;
   align-items: center;
+  margin: 2rem 0;
 `
 
 export const LeftContainer = styled.div`
