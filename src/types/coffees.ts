@@ -1,7 +1,7 @@
 export interface CoffeType {
   id: number,
   image: string,
-  labels: string[],
+  label: string,
   title: string,
   description: string,
   price: number

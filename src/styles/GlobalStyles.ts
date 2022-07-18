@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { ThemeType } from "./themes/default"
-import introBackground from "../assets/images/bg.svg";
+import introBackground from "../assets/images/background.svg";
 
 export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
   * {
@@ -14,12 +14,11 @@ export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     font-family: 'Roboto', sans-serif;
     font-size: 0.875rem;
     background-color: ${props => props.theme.grey_100};
-    /* background: url(${introBackground}) no-repeat center center fixed;
+    background: url(${introBackground}) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; */
-    
+    background-size: cover;
   }
 
   input, button {

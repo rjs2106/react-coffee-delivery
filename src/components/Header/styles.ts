@@ -22,8 +22,8 @@ export const HeaderActions = styled.div`
     gap: 0.25rem;
     background: ${props => props.theme.purple_300};
     color: ${props => props.theme.purple_700};
+    border: 1px solid ${props => props.theme.purple_500};
   }
-
 
   & > div > svg {
     color: ${props => props.theme.purple_700};
@@ -40,7 +40,7 @@ export const CartButton = styled.button`
   align-items: center;
   border: none;
   padding: 0.5rem;
-  border: 1px solid transparent;
+  border: 1px solid ${props => props.theme.yellow_700};
   position: relative;
   transition: all 0.2s;
 
