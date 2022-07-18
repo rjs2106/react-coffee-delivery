@@ -2,10 +2,13 @@ import styled, { css } from 'styled-components';
 
 export const HeaderContainer = styled.header`
   height: 6.5rem;
-  padding: 0 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1280px;
+  margin: 0 auto;
+  border: 1px solid red;
+  padding: 0 1rem;
 `
 
 export const HeaderActions = styled.div`
