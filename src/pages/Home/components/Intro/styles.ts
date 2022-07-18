@@ -16,8 +16,8 @@ export const IntroContainer = styled.section`
 export const LeftContainer = styled.div`
   h1 {
     font-family: 'Baloo 2', cursive;
-    font-size: 3.225rem;
-    line-height: 3.225rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
     color: ${props => props.theme.grey_900}
   }
 

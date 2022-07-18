@@ -11,17 +11,19 @@ export const CoffeeItemContainer = styled.div`
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   align-items: center;
   position: relative;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+  box-sizing: border-box;
 
   img {
     width: 6rem;
     position: absolute;
     top: -20px;
   }
-
-
 `
 
 export const Badges = styled.div`
+  margin-bottom: 1rem;
   span {
     margin-top: 5.5rem;
     background-color: ${props => props.theme.yellow_300};
@@ -36,6 +38,7 @@ export const Badges = styled.div`
 
 export const Title = styled.h1`
   font-size: 1rem;
+  margin-bottom: 0.5rem;
 `
 
 export const Description = styled.p`
