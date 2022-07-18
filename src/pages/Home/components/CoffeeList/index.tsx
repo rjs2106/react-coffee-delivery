@@ -2,7 +2,6 @@ import { CoffeType } from "../../../../types/coffees";
 import { CoffeeItem } from "../CoffeeItem";
 import { CoffeeListContainer } from "./styles";
 
-
 const coffees: CoffeType[] = [
   {
     id: 1,
@@ -139,5 +138,3 @@ export const CoffeeList = () => {
     </CoffeeListContainer>
   );
 }
-
-export default CoffeeList;

@@ -1,4 +1,5 @@
 import { useTheme } from 'styled-components';
+import { ThemeType } from '../../../../styles/themes/default';
 
 import {
   ShoppingCartSimple,
@@ -16,10 +17,8 @@ import {
 } from "./styles";
 
 import coffeeImage from '../../../../assets/images/coffee.svg';
-import { ThemeType } from '../../../../styles/themes/default';
 
 export const Intro = () => {
-
   const theme = useTheme() as ThemeType;
 
   return (

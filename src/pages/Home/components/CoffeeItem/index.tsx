@@ -1,6 +1,7 @@
 import { ShoppingCart, Minus, Plus } from "phosphor-react";
 import { CoffeType } from "../../../../types/coffees";
 
+// Styles
 import {
   CoffeeItemContainer,
   Badges,
@@ -13,15 +14,14 @@ import {
   CartButton
 } from "./styles";
 
-
-interface CoffeeItemProps {
-  coffee: CoffeType
-}
-
 // Constants
 const currency = "R$";
 const extension = ".svg";
 const imagesPath = "../../../../../public/images/coffees/";
+
+interface CoffeeItemProps {
+  coffee: CoffeType
+}
 
 export const CoffeeItem = ({ coffee }: CoffeeItemProps) => {
 
@@ -32,12 +32,18 @@ export const CoffeeItem = ({ coffee }: CoffeeItemProps) => {
       <img src={image} alt={coffee.title} />
 
       <Badges>
-        <span>{coffee.label}</span>
+        <span>
+          {coffee.label}
+        </span>
       </Badges>
 
-      <Title>{coffee.title}</Title>
-      <Description>{coffee.description}</Description>
+      <Title>
+        {coffee.title}
+      </Title>
 
+      <Description>
+        {coffee.description}
+      </Description>
 
       <CoffeeItemActions>
         <span>
@@ -52,7 +58,13 @@ export const CoffeeItem = ({ coffee }: CoffeeItemProps) => {
             <Minus />
           </ButtonDecrease>
 
-          <input type="number" min="1" max="20" step="1" value="1" />
+          <input 
+            type="number"
+            min="1"
+            max="20"
+            step="1"
+            value="1"
+          />
 
           <ButtonIncrease type="button">
             <Plus />
@@ -60,10 +72,9 @@ export const CoffeeItem = ({ coffee }: CoffeeItemProps) => {
         </InputNumber>
 
         <CartButton type="button">
-          <ShoppingCart  weight="fill"/>
+          <ShoppingCart weight="fill" />
         </CartButton>
       </CoffeeItemActions>
-
     </CoffeeItemContainer>
   )
 }

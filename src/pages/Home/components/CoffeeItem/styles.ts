@@ -103,7 +103,6 @@ export const ButtonDecrease = styled(BaseInputNumberButtons)`
   border-bottom-left-radius: 6px;
 `
 
-
 export const ButtonIncrease = styled(BaseInputNumberButtons)`
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
