@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom';
+
 import styled, { css } from 'styled-components';
 
 export const HeaderContainer = styled.header`
@@ -31,7 +33,7 @@ export const HeaderActions = styled.div`
   }
 `
 
-export const CartButton = styled.button`
+export const Link = styled(NavLink)`
   border-radius: 6px;
   background-color: ${props => props.theme.yellow_300};
   color: ${props => props.theme.yellow_700};

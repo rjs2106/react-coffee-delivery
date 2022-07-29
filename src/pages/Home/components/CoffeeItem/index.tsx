@@ -15,19 +15,11 @@ import {
   CartButton
 } from "./styles";
 
-// Constants
-const currency = "R$";
-const extension = ".svg";
-const imagesPath = "../../../../../public/images/coffees/";
-
 interface CoffeeItemProps {
   coffee: CoffeType
 }
 
 export const CoffeeItem = ({ coffee }: CoffeeItemProps) => {
-
-  const image = imagesPath + coffee.image + extension;
-
   const [quantity, setQuantity] = useState(1);
 
   const handleIncreaseQuantity = () => {
@@ -39,9 +31,16 @@ export const CoffeeItem = ({ coffee }: CoffeeItemProps) => {
     }
   }
 
+  const handleAddToCart = () => {
+    console.log({
+      id: coffee.id,
+      quantity
+    });
+  }
+
   return (
     <CoffeeItemContainer>
-      <img src={image} alt={coffee.title} />
+      <img src={`./images/coffees/${coffee.image}.svg`} alt={coffee.title} />
 
       <Badges>
         <span>
@@ -59,7 +58,7 @@ export const CoffeeItem = ({ coffee }: CoffeeItemProps) => {
 
       <CoffeeItemActions>
         <span>
-          {currency}
+          R$
           <strong>
             {coffee.price.toFixed(2)}
           </strong>
@@ -84,7 +83,7 @@ export const CoffeeItem = ({ coffee }: CoffeeItemProps) => {
           </ButtonIncrease>
         </InputNumber>
 
-        <CartButton type="button">
+        <CartButton type="button" onClick={handleAddToCart}>
           <ShoppingCart weight="fill" />
         </CartButton>
       </CoffeeItemActions>

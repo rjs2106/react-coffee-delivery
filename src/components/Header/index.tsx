@@ -1,17 +1,21 @@
-import logo from "../../assets/images/logo.svg";
 import { MapPin, ShoppingCart } from "phosphor-react";
+import { NavLink } from "react-router-dom";
+import logo from "../../assets/images/logo.svg";
 
 import {
   HeaderContainer,
   HeaderActions,
-  CartButton,
+  Link,
   Counter
 } from "./styles";
 
 export const Header = () => {
+
   return (
     <HeaderContainer>
-      <img src={logo} />
+      <NavLink to="/">
+        <img src={logo}  />
+      </NavLink>
 
       <HeaderActions>
         <div>
@@ -19,10 +23,10 @@ export const Header = () => {
           <span>Vila Nova de Gaia, PT</span>
         </div>
 
-        <CartButton>
+        <Link to="/checkout">
           <Counter>3</Counter>
           <ShoppingCart weight="fill" />
-        </CartButton>
+        </Link>
 
       </HeaderActions>
 
