@@ -1,4 +1,6 @@
+import axios from 'axios';
 import { MapPin, ShoppingCart } from "phosphor-react";
+import { useEffect } from 'react';
 import { NavLink } from "react-router-dom";
 import logo from "../../assets/images/logo.svg";
 
@@ -10,6 +12,14 @@ import {
 } from "./Header.styles";
 
 const Header = () => {
+
+  const getCart = async () => {
+    const { data } = await axios.get('http://localhost:3000/api/cart');
+  }
+
+  useEffect(() => {
+    getCart();
+  }, [])
 
   return (
     <HeaderContainer>

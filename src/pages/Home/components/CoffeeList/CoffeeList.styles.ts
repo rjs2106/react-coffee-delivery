@@ -15,3 +15,8 @@ export const CoffeeListContainer = styled.section`
     flex-wrap: wrap;
   }
 `;
+
+export const Loading = styled.h1`
+  color: ${props => props.theme.grey_600};
+  font-size: 1rem;
+`

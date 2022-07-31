@@ -1,3 +1,4 @@
+import axios from 'axios';
 import { ShoppingCart, Minus, Plus } from "phosphor-react";
 import { useState } from "react";
 import { CoffeeType } from "../../../../types/coffees";
@@ -31,8 +32,8 @@ const CoffeeItem = ({ coffee }: CoffeeItemProps) => {
     }
   }
 
-  const handleAddToCart = () => {
-    console.log({
+  const handleAddToCart = async () => {
+    axios.post("http://localhost:3000/api/addToCart", {
       id: coffee.id,
       quantity
     });
