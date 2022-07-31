@@ -1,4 +1,4 @@
-export interface CoffeType {
+export interface CoffeeType {
   id: number,
   image: string,
   label: string,

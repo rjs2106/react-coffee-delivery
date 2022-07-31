@@ -25,3 +25,8 @@ export const GlobalStyles = createGlobalStyle<{ theme: ThemeType }>`
     font-family: 'Roboto', sans-serif;
   }
 `
+
+export const Sizes = {
+  small: "(max-width: 768px)",
+  medium: "(min-width: 768px) and (max-width: 1280px)"
+}
