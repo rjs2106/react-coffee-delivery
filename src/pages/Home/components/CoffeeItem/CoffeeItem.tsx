@@ -1,6 +1,6 @@
-import axios from 'axios';
 import { ShoppingCart, Minus, Plus } from "phosphor-react";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { CartContext } from "../../../../contexts/CartContext";
 import { CoffeeType } from "../../../../types/coffees";
 
 // Styles
@@ -21,6 +21,8 @@ interface CoffeeItemProps {
 }
 
 const CoffeeItem = ({ coffee }: CoffeeItemProps) => {
+
+  const cart = useContext(CartContext);
   const [quantity, setQuantity] = useState(1);
 
   const handleIncreaseQuantity = () => {
@@ -32,8 +34,8 @@ const CoffeeItem = ({ coffee }: CoffeeItemProps) => {
     }
   }
 
-  const handleAddToCart = async () => {
-    axios.post("http://localhost:3000/api/addToCart", {
+  const handleAddToCart = () => {
+    cart.addItem({
       id: coffee.id,
       quantity
     });
